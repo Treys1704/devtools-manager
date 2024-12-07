@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { Toaster } from 'sonner';
 
 function App() {
-  const [terminalOpen, setTerminalOpen] = useState(true);
+  const [terminalOpen,] = useState(true);
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-6">

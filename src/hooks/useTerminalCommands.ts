@@ -8,7 +8,7 @@ export function useTerminalCommands() {
   const [currentState, setCurrentState] = useState<TerminalState>('initial');
   const [selectedFramework, setSelectedFramework] = useState<'react' | 'vue' | null>(null);
   const [projectName, setProjectName] = useState<string>('');
-  const [cssLibrary, setCssLibrary] = useState<'tailwind' | 'shadcn' | null>(null);
+  const [cssLibrary,] = useState<'tailwind' | 'shadcn' | null>(null);
   const [currentStep, setCurrentStep] = useState<number>(0);
 
   const simulateInstallation = async (
