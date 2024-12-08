@@ -27,6 +27,7 @@ export default function Terminal() {
       { type: 'output', content: '🚀 Welcome to DevTools Manager v1.0.0 · Powered By Tresor Manock' },
       { type: 'output', content: '----------------------------------------' },
       { type: 'output', content: 'Type "npm start devtools" to begin' },
+      { type: 'output', content: 'Tips: Type "clear" to clear the terminal 😉' },
     ]);
   }, []);
 
@@ -46,6 +47,16 @@ export default function Terminal() {
 
     setLines(prev => [...prev, { type: 'input', content: `> ${trimmedInput}` }]);
     setCurrentInput('');
+
+    if (trimmedInput.toLowerCase() === 'clear') {
+      setLines([
+        { type: 'output', content: '🚀 Welcome to DevTools Manager v1.0.0 · Powered By Tresor Manock' },
+        { type: 'output', content: '----------------------------------------' },
+        { type: 'output', content: 'Type "npm start devtools" to begin' },
+        { type: 'output', content: 'Tips: Type "clear" to clear the terminal 😉' },
+      ]);
+      return;
+    }
 
     const response = await handleCommand(trimmedInput);
     setLines(prev => [...prev, { type: 'output', content: response }]);
