@@ -32,7 +32,7 @@ export async function createProjectWithVite(config: ProjectConfig): Promise<stri
     
     // Add CSS library if selected
     if (config.cssLibrary === 'tailwind') {
-      const tailwindFiles = getTailwindConfig();
+      const tailwindFiles = getTailwindConfig(config.framework);
       for (const [path, content] of Object.entries(tailwindFiles)) {
         zip.file(path, content);
       }
@@ -44,7 +44,7 @@ export async function createProjectWithVite(config: ProjectConfig): Promise<stri
         'autoprefixer': '^10.4.14'
       };
     } else if (config.cssLibrary === 'shadcn') {
-      const tailwindFiles = getTailwindConfig();
+      const tailwindFiles = getTailwindConfig(config.framework);
       for (const [path, content] of Object.entries(tailwindFiles)) {
         zip.file(path, content);
       }

@@ -48,7 +48,7 @@ export function useTerminalCommands() {
 -
 Choose an option (1-2):`;
         }
-        return 'Invalid command. Type "npm start devtools" to begin.';
+        return '❌ Invalid command. Type "npm start devtools" to begin.';
 
       case "menu":
         switch (command) {
@@ -61,9 +61,10 @@ Choose an option (1-2):`;
 -
 Choose an option (1-2):`;
           case "2":
+            setCurrentState("initial");
             return "Goodbye 👋! Thank you for using DevTools Manager.";
           default:
-            return "Invalid option. Please choose 1 or 2.";
+            return "❌ Invalid option. Please choose 1 or 2.";
         }
 
       case "framework-selection":
@@ -72,7 +73,7 @@ Choose an option (1-2):`;
           setCurrentState("project-name");
           return "\n📝 Enter your project name:";
         }
-        return "Invalid option. Please choose 1 or 2.";
+        return "❌ Invalid option. Please choose 1 or 2.";
 
       case "project-name":
         if (command.trim()) {
@@ -113,7 +114,7 @@ Choose an option (1-2):`;
 4. Start the development server: npm run dev ·`;
           }
         }
-        return "Invalid option. Please choose 1 or 2.";
+        return "❌ Invalid option. Please choose 1 or 2.";
 
       case "css-library-selection":
         if (["1", "2"].includes(command)) {
@@ -138,7 +139,7 @@ Choose an option (1-2):`;
 3. Install dependencies: npm install ·
 4. Start the development server: npm run dev${additionalSteps}`;
         }
-        return "Invalid option. Please choose 1 or 2.";
+        return "❌ Invalid option. Please choose 1 or 2.";
 
       default:
         return "Unknown command.";

@@ -1,9 +1,12 @@
-export const getTailwindConfig = () => ({
+export const getTailwindConfig = (framework: 'react' | 'vue') => ({
   'tailwind.config.js': `/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx,vue}",
+    ${framework === 'react' 
+      ? '"./src/**/*.{js,ts,jsx,tsx}"'
+      : '"./src/**/*.{vue,js,ts}"'
+    },
   ],
   theme: {
     extend: {},
