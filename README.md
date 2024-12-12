@@ -93,6 +93,8 @@ your-project/
 ## Support 💬
 
 For any issues or questions, please open an issue in the repository.
+Thank you for contributing to our open-source project! We appreciate your support 🚀
+Don't forget to leave a star ⭐
 
 ## 📫 Contact
 For any question, you can contact me :

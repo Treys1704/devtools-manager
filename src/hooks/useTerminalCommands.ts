@@ -111,7 +111,7 @@ Choose an option (1-2):`;
 1. Extract the downloaded zip file ·
 2. Navigate to the project directory: cd ${projectName} ·
 3. Install dependencies: npm install ·
-4. Start the development server: npm run dev ·`;
+4. Start the development server: npm run dev`;
           }
         }
         return "❌ Invalid option. Please choose 1 or 2.";
@@ -129,7 +129,7 @@ Choose an option (1-2):`;
           setCurrentState("initial");
           const additionalSteps =
             selectedCssLibrary === "shadcn"
-              ? `\n5. Initialize Shadcn/ui: npx shadcn${
+              ? `\n4. Initialize Shadcn/ui: npx shadcn${
                   selectedFramework === "react" ? "" : "-vue"
                 }@latest init`
               : "";
@@ -137,7 +137,8 @@ Choose an option (1-2):`;
 1. Extract the downloaded zip file ·
 2. Navigate to the project directory: cd ${projectName} ·
 3. Install dependencies: npm install ·
-4. Start the development server: npm run dev${additionalSteps}`;
+${additionalSteps}
+${selectedCssLibrary === "shadcn" ? "· 5" : "4"}. Start the development server: npm run dev`;
         }
         return "❌ Invalid option. Please choose 1 or 2.";
 
