@@ -75,7 +75,7 @@ export async function createProjectWithVite(config: ProjectConfig): Promise<stri
     saveAs(blob, `${config.projectName}.zip`);
 
     toast.success('Project created and downloaded successfully!', {
-      duration: 4000,
+      duration: 3000,
     });
     
     return '';

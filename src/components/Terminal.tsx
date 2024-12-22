@@ -26,7 +26,7 @@ export default function Terminal() {
     setLines([
       { type: 'output', content: '🚀 Welcome to DevTools Manager v1.0.0 · Powered By Tresor Manock' },
       { type: 'output', content: '----------------------------------------' },
-      { type: 'output', content: 'Type "npm start devtools" to begin' },
+      { type: 'output', content: 'Type "devtools start" to begin' },
       { type: 'output', content: 'Tips: Type "clear" to clear the terminal 💨' },
     ]);
   }, []);
@@ -52,7 +52,7 @@ export default function Terminal() {
       setLines([
         { type: 'output', content: '🚀 Welcome to DevTools Manager v1.0.0 · Powered By Tresor Manock' },
         { type: 'output', content: '----------------------------------------' },
-        { type: 'output', content: 'Type "npm start devtools" to begin' },
+        { type: 'output', content: 'Type "devtools start" to begin' },
         { type: 'output', content: 'Tips: Type "clear" to clear the terminal 💨' },
       ]);
       return;

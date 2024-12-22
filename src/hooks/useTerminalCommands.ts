@@ -39,7 +39,7 @@ export function useTerminalCommands() {
 
     switch (currentState) {
       case "initial":
-        if (command.toLowerCase() === "npm start devtools") {
+        if (command.toLowerCase() === "devtools start") {
           setCurrentState("menu");
           return `
 🚀 Welcome to DevTools Manager Menu:
@@ -48,7 +48,7 @@ export function useTerminalCommands() {
 -
 Choose an option (1-2):`;
         }
-        return '❌ Invalid command. Type "npm start devtools" to begin.';
+        return '❌ Invalid command. Type "devtools start" to begin.';
 
       case "menu":
         switch (command) {

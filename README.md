@@ -14,7 +14,7 @@ DevTools Manager is an interactive CLI tool that helps you quickly create and se
 ## Getting Started 🎯
 
 1. Open the application in your browser
-2. Type `npm start devtools` to begin
+2. Type `devtools start` to begin
 3. Follow the interactive prompts to create your project:
    - Choose your framework (React/Vue)
    - Enter your project name
@@ -25,7 +25,7 @@ DevTools Manager is an interactive CLI tool that helps you quickly create and se
 
 1. **Start the Tool**
    ```bash
-   npm start devtools
+   devtools start
    ```
 
 2. **Main Menu**
